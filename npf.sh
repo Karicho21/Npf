@@ -2,7 +2,8 @@
 #SBATCH --job-name=4145-A5
 #SBATCH --partition=Centaurus
 #SBATCH --time=01:00:00
-#SBATCH --mem=16G
+#SBATCH --mem=32G
+#SBATCH --cpus-per-task=16
 
 record="record.txt"
 
