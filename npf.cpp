@@ -244,7 +244,8 @@ int main(int argc, char* argv[]) {
   }
   
   double end_time = omp_get_wtime();
-  std::cout << "----------------------------------------------------------------\n";
+
+  std::cout << "\n\n----------------------------------------------------------------\n";
   std::cout << "Simulation completed in " << (end_time - start_time) << " seconds\n";
   std::cout << "----------------------------------------------------------------\n\n\n\n\n";
 
