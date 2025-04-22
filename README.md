@@ -1,5 +1,6 @@
 
 
+
 This program is for ITCS 4145 A5 Nbody Parallel for
 
 But before you begin, make sure you have access to
@@ -21,5 +22,6 @@ Steps to compile and experiment:
 7. If you would like a csv file recording the time, type "sbatch npf.sh > timelog.csv". It will schedule the job and record the time onto csv file called timelog.csv. You can name the file whatever you desire, but this timelog is what I named.
 
 Example execution result:
-
-OMP_NUM_THREADS=16 ./nbody 1000 1 10000 100 ------> Simulation completed in 2.414389036744833e+02 seconds
+OMP_NUM_THREADS=16 ./nbody planet 200 5000000 50000 -------> Simulation completed in 2.014356432082132e+02 seconds
+OMP_NUM_THREADS=16 ./nbody 100 1 10000 100 ----------------> Simulation completed in 1.044356522429734e+01 seconds
+OMP_NUM_THREADS=16 ./nbody 1000 1 10000 100 ---------------> Simulation completed in 2.414389036744833e+02 seconds
