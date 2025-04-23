@@ -23,9 +23,9 @@ Steps to compile and experiment:
 
 Example execution result:
 
-OMP_NUM_THREADS=4 ./nbody planet 200 5000000 10000 --> Simulation completed in 155.731 seconds
-OMP_NUM_THREADS=4 ./nbody 100 1 10000 100 -----------> Simulation completed in 13.730 seconds
-OMP_NUM_THREADS=4 ./nbody 1000 1 10000 100 ----------> Simulation completed in  seconds
+- OMP_NUM_THREADS=4 ./nbody planet 200 5000000 10000 --> Simulation completed in 155.731 seconds
+- OMP_NUM_THREADS=4 ./nbody 100 1 10000 100 -----------> Simulation completed in 13.730 seconds
+- OMP_NUM_THREADS=4 ./nbody 1000 1 10000 100 ----------> Simulation completed in  seconds
 
 Time varies  each run. You won't get same time each run but should be similar.
 
