@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <random>
@@ -188,20 +187,23 @@ void load_from_file(simulation& s, std::string filename) {
 int main(int argc, char* argv[]) {
   if (argc != 5) {
     std::cerr
-      <<"Please enter "<<argv[0]<<" <input> <dt> <nbstep> <printevery>"<<"\n"
-      <<"input can be:"<<"\n"
-      <<"a number (random initialization)"<<"\n"
-      <<"planet (initialize with solar system)"<<"\n"
-      <<"a filename (load from file in singleline tsv)"<<"\n";
+      <<"Usage: "<<argv[0]<<" <input> <dt> <nbstep> <printevery>\n"
+      <<"input can be:\n"
+      <<"  - a number (random init)\n"
+      <<"  - 'planet' (solar system init)\n"
+      <<"  - a filename (load state)\n";
     return -1;
   }
-  
+
   double dt = std::atof(argv[2]); 
   size_t nbstep = std::atol(argv[3]);
   size_t printevery = std::atol(argv[4]);
   
   simulation s(1);
+
+  // Start timing
   double start_time = omp_get_wtime();
+  std::cout << "\n[Simulation started]\n";
 
   {
     size_t nbpart = std::atol(argv[1]);
@@ -242,11 +244,11 @@ int main(int argc, char* argv[]) {
     
     current_time += dt;
   }
-  
   double end_time = omp_get_wtime();
+  double elapsed = end_time - start_time;
 
   std::cout << "\n\n----------------------------------------------------------------\n";
-  std::cout << "Simulation completed in " << (end_time - start_time) << " seconds\n";
+  std::cout << "Simulation completed in " << std::fixed << std::setprecision(3) << elapsed << " seconds\n";
   std::cout << "----------------------------------------------------------------\n\n\n\n\n";
 
   return 0;

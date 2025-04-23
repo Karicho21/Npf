@@ -23,6 +23,21 @@ Steps to compile and experiment:
 
 Example execution result:
 
-OMP_NUM_THREADS=16 ./nbody planet 200 5000000 50000 -------> Simulation completed in 2.014356432082132e+02 seconds
-OMP_NUM_THREADS=16 ./nbody 100 1 10000 100 ----------------> Simulation completed in 1.044356522429734e+01 seconds
-OMP_NUM_THREADS=16 ./nbody 1000 1 10000 100 ---------------> Simulation completed in 2.414389036744833e+02 seconds
+OMP_NUM_THREADS=4 ./nbody planet 200 5000000 10000 --> Simulation completed in 155.731 seconds
+OMP_NUM_THREADS=4 ./nbody 100 1 10000 100 -----------> Simulation completed in 13.730 seconds
+OMP_NUM_THREADS=4 ./nbody 1000 1 10000 100 ----------> Simulation completed in  seconds
+
+Time varies  each run. You won't get same time each run but should be similar.
+
+Sequential record from A2(N-body in sequential):
+
+200 5000000 10000, Run time was: 1356 ms = 1.356 sec
+0.87% of runtime  compared to parallel run.
+
+
+100 1 10000 100, Run time was: 2155 ms = 2.155 sec
+15.7% of runtime compared to parallel run.
+
+1000 1 10000 100, Run time was: 206766 ms = 206.766 sec
+
+
