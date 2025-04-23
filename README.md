@@ -39,5 +39,6 @@ Sequential record from A2(N-body in sequential):
 15.7% of runtime compared to parallel run.
 
 1000 1 10000 100, Run time was: 206766 ms = 206.766 sec
+20.47% of runtime compared to parallel run.
 
 
